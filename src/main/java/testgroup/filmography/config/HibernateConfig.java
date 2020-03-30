@@ -41,9 +41,9 @@ public class HibernateConfig {
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(enviroment.getRequiredProperty("jdbc.driverClassName"));
-        dataSource.setUrl(enviroment.getRequiredProperty("jdbc.url"));
-        dataSource.setUsername(enviroment.getRequiredProperty("jdbc.username"));
-        dataSource.setPassword(enviroment.getRequiredProperty("jdbc.password"));
+        dataSource.setUrl(enviroment.getRequiredProperty("jdbc.database.url"));
+        dataSource.setUsername(enviroment.getRequiredProperty("jdbc.database.username"));
+        dataSource.setPassword(enviroment.getRequiredProperty("jdbc.database.password"));
         return dataSource;
     }
 
